@@ -39,7 +39,7 @@ answerAi/
 
 ---
 <a href="https://youtube.com/shorts/x7cvR746nHg?feature=shar">
-  <img src="thumbnail.jpg" alt="Demo Video" width="480"/>
+  <img src="thumbnail.jpg" alt="Demo Video" width="400" height="500"/>
 </a>
 
 
