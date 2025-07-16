@@ -28,7 +28,7 @@ answerAi/
 │   ├── test_images/       # Sample answer sheets for testing
 │   └── debug/             # Output folder for marked images
 │
-├── mobile/                # React Native (Expo) app
+├── answerAI-react-native/      # React Native (Expo) app
 │   ├── lib/
 │   │   └── api.ts         # API base URL config
 │   ├── components/        # Reusable UI components
