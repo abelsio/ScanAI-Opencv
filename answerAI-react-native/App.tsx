@@ -279,7 +279,7 @@ const styles = StyleSheet.create({
     width: GUIDE_WIDTH,
     height: GUIDE_HEIGHT,
     borderWidth: 4,
-    borderColor: '#4CAF50',
+    borderColor: '#32FF00',
   },
   guideText: {
     color: 'white',
