@@ -35,10 +35,6 @@ answerAi/
 │
 └── README.md # This file
 
-yaml
-Copy
-Edit
-
 ---
 
 ## 🐍 Backend Setup (FastAPI)
@@ -47,111 +43,63 @@ Edit
 
 ```bash
 python3 -m venv venv
-2. Activate Environment
+
 Windows:
-
-bash
-Copy
-Edit
 .\venv\Scripts\activate
+
 Mac/Linux:
-
-bash
-Copy
-Edit
 source venv/bin/activate
-3. Install Dependencies
-bash
-Copy
-Edit
-pip install -r requirements.txt
-4. Run FastAPI Server
-bash
-Copy
-Edit
-uvicorn main:app --host 0.0.0.0 --port 8000
-Docs: http://localhost:8000/docs
 
-📱 Mobile App Setup (React Native + Expo)
-1. Navigate to the mobile folder
-bash
-Copy
-Edit
-cd answerAi/mobile
-2. Install dependencies
-bash
-Copy
-Edit
+pip install -r requirements.txt
+
+uvicorn main:app --host 0.0.0.0 --port 8000
+
+cd ./answerAi
+
 npm install
 # or
 yarn install
-3. Configure API URL
+
+Configure API URL
 Edit lib/api.ts:
-
-ts
-Copy
-Edit
 export const API_URL = 'http://YOUR_LOCAL_IP:8000';
-// Replace with your actual IP and make sure FastAPI uses host 0.0.0.0
-4. Run the app
-bash
-Copy
-Edit
-npx expo start
-Scan the QR code with Expo Go
+// Replace with your actual IP where the FastAPI server runs
 
-Or run on Android/iOS emulator
+npx expo start
+
 
 🚀 Usage Guide
 Backend:
-Put test images into test_images/
+Place test answer sheets into test_images/
 
-Processed results are saved into debug/
+Processed results will be saved into debug/
 
 API Endpoints:
-POST /upload/ – Process an uploaded answer sheet
+POST /upload/ – Upload and process an answer sheet
 
-GET /marked – View the latest marked image
+GET /marked – Retrieve the latest marked image
 
 Mobile App:
-Select or capture an image of the answer sheet
+Tap “Select Answer Sheet” to choose or capture an image
 
-Tap "Grade Answers"
+Tap “Grade Answers” to process the sheet
 
-Instantly see results with marked answers
+View results with correct/incorrect markers
+
 
 ⚙️ Configuration (in main.py)
-python
-Copy
-Edit
-BUBBLE_MIN_SIZE = 0.02          # 2% of image area
-BUBBLE_MAX_SIZE = 0.15          # 15% of image area
-THRESHOLD_SENSITIVITY = 0.6     # Bubble fill threshold
-Tweak these to improve detection for your specific sheet format.
+| Problem                    | Solution                                                        |
+| -------------------------- | --------------------------------------------------------------- |
+| ❌ Bubbles not detected     | Adjust detection params in `main.py`, and check `debug/` output |
+| 🌐 CORS errors (mobile)    | Ensure `API_URL` in `api.ts` matches backend server IP/port     |
+| 📸 Blurry image            | Use higher quality input (at least 300dpi recommended)          |
+| 🔒 Can't access from phone | Use `--host 0.0.0.0` when running FastAPI and use your local IP |
 
-🛠️ Troubleshooting
-Problem	Solution
-❌ Bubbles not detected	Adjust detection params in main.py, check debug/ output
-🌐 CORS errors (mobile)	Ensure API_URL in api.ts matches the backend IP + port
-📸 Image too blurry	Use higher quality (300+ dpi) or better lighting
-🔒 Network access issue	Use --host 0.0.0.0 and confirm device is on same LAN
 
 🤝 Contributing
 Pull requests are welcome!
-For major changes, open an issue first to discuss the proposed update.
+For major changes, please open an issue first to discuss what you'd like to change.
 
 📜 License
-MIT License – See LICENSE file for details.
-© 2023 [Your Name]
-
-🎓 Smart grading for the modern classroom.
-yaml
-Copy
-Edit
-
----
-
-Let me know if you want:
-- An **MIT license template**
-- A **`.env` setup** guide
-- Or a **deployment-ready version** of this setup (e.g., with Docker or Railway)
+MIT License – see LICENSE file for details.
+© 2024 ABEL SALIE
