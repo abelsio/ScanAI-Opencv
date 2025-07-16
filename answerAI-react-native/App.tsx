@@ -35,9 +35,7 @@ export default function AnswerSheetScanner() {
   }, []);
 
   const closeAnswer = ()=>{
-    setAnswers({})
     setMarkedImg('')
-    setCapturedImage(null)
     setIsPreviewVisible(false)
   }
 
