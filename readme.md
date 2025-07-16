@@ -39,6 +39,10 @@ answerAi/
 
 ---
 
+[![Demo Video](thumbnail.jpg)](https://youtube.com/shorts/x7cvR746nHg?feature=share)
+
+---
+
 ## 🐍 Backend Setup (FastAPI)
 
 ### 1. Create Virtual Environment
