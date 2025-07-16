@@ -90,6 +90,16 @@ export const API_URL = 'http://YOUR_LOCAL_IP:8000';
 
 Replace `YOUR_LOCAL_IP` with the actual local IP where FastAPI is running.
 
+### 2. Change correct_answers
+
+Edit `App.tsx`:
+
+```tsx
+  const correctAnswers = {"Q1": "B", "Q2": "C" ...};
+```
+
+Replace `YOUR_LOCAL_IP` with the actual local IP where FastAPI is running.
+
 ### 2. Start Expo
 
 ```bash
