@@ -72,7 +72,7 @@ uvicorn main:app --host 0.0.0.0 --port 8000
 ## 📱 Mobile App Setup (React Native + Expo)
 
 ```bash
-cd mobile
+cd answerAI-react-native
 
 # Install dependencies
 npm install
